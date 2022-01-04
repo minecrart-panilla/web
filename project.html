@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Panilla members!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+  </head>
+  <body>
+
+    <div uk-sticky class="uk-background-muted uk-visible@s">
+      <nav class="uk-navbar">
+        <div class="uk-navbar-center">
+          <ul class="uk-navbar-nav">
+            <li>
+              <a href="./index.html#top"><span uk-icon="home" class="uk-margin-small-right"></span>
+                Top
+              </a>
+            </li>
+            <li>
+              <a href="./index.html#topics"><span uk-icon="file-text" class="uk-margin-small-right"></span>
+                Topics
+              </a>
+            </li>
+            <li>
+              <a href="./index.html#downloads"><span uk-icon="download" class="uk-margin-small-right"></span>
+                Download
+              </a>
+            </li>
+            <li>
+              <a href="./index.html#faq"><span uk-icon="question" class="uk-margin-small-right"></span>
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a href="./index.html#about"><span uk-icon="users" class="uk-margin-small-right"></span>
+                About
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <nav class="uk-navbar uk-navbar-container uk-hidden@s" uk-sticky>
+      <div class="uk-navbar-left">
+        <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#" uk-toggle="target: #offcanvas-push"></a>
+      </div>
+    </nav>
+
+    <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: false">
+      <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <ul class="uk-nav">
+          <li><a href="./index.html#">TOP</a></li>
+          <li><a href="./index.html#topics">TOPICS</a></li>
+          <li><a href="./index.html#downloads">DOWNLOAD</a></li>
+          <li><a href="./index.html#faq">FAQ</a></li>
+          <li><a href="./index.html#about">ABOUT</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="uk-margin-left uk-margin-right">
+
+      <div class="">
+        <div class="uk-background-cover uk-height-1-1 uk-panel uk-flex uk-flex-center uk-flex-middle" uk-height-viewport="offset-top: true; offset-bottom: 70">
+          <p class="uk-heading-2xlarge uk-text-muted">
+            Panilla Project
+          </p>
+        </div>
+      </div>
+
+      <nav class="uk-navbar" uk-sticky="offset:90vh;">
+        <div class="uk-navbar-right">
+          <a href="#" uk-totop uk-scroll></a>
+        </div>
+      </nav>
+
+      <div class="uk-margin-large-top">
+        <div class="uk-container">
+          <div class="uk-card uk-card-default uk-card-body">
+            <div class="uk-card-title">
+              About Project
+            </div>
+            <p>
+              ここに説明
+              あああああああああああああああああああああああああああああああああ
+              あああああああああああああああ
+              いいいいいいいいいいいいいいいいいいいいいいいいい
+              おおおおおおおおおおおおおおおおおおおおおおお
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="uk-flex-center uk-margin-large-top" uk-grid>
+        <div>
+          <a class="" uk-icon="icon:twitter; ratio:2" href="#"></a>
+        </div>
+        <div>
+          <a class="" uk-icon="icon:youtube; ratio:2" href="#"></a>
+        </div>
+        <div>
+          <a class="" uk-icon="icon:discord; ratio:2" href="#"></a>
+        </div>
+      </div>
+    </div>
+
+
+    <hr>
+    <footer class="uk-flex uk-flex-center uk-margin-bottom">
+      ©2021 Panilla Group
+    </footer>
+  </body>
+</html>
