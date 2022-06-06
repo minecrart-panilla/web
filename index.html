@@ -174,6 +174,9 @@
         <div class="uk-card-body uk-card-default uk-width-1-1">
           <ul class="uk-subnav uk-subnav-pill uk-flex-center" uk-switcher="connect: .switcher-container">
             <li><a href="#">
+              dendens apex datapacks openBeta
+            </a></li>
+            <li><a href="#">
               denden's Compass ver.1.0
             </a></li>
             <li><a href="#">
@@ -191,6 +194,9 @@
                 <span class="uk-badge">データパック</span> <span class="uk-badge">Version 1.18.1</span>
               </li>
               <li>
+                <span class="uk-badge">データパック</span> <span class="uk-badge">Version 1.18.1</span>
+              </li>
+              <li>
                 <span class="uk-badge">リソースパック</span> <span class="uk-badge">Version 1.16+</span>
               </li>
 <!--
@@ -200,6 +206,98 @@
 -->
             </ul>
             <ul class="uk-switcher switcher-container">
+              <li>
+                APEX Legendsのレジェンドのアビリティとアルティメットを再現したデータパックです。 <br>
+                β版ではシングルプレイのみ対応しています。（マルチプレイにて動作させると、意図しない挙動や、そもそも挙動しないなどがあると思います。） <br>
+                主に対対MOB用に制作してるので、プレイヤー同士への効果はありません。 <br>
+                APEXのレジェンドたちが、マイクラの世界に迷い込んでしまったら…というコンセプトで作っているので、いつものサバイバルのマイクラを楽しみながら、クールタイムを待ち、スキルを楽しんでもらえたらなと思います。<br>
+                制作者 でんでん<br>
+                <span uk-icon="icon: cloud-download"></span>
+                <a href="./dist/dendens_apex_datapacks/dendens_apex_datapacks_openBeta.zip">dendens_apex_datapacks_openBeta</a><br>
+
+                <div>
+                  <ul uk-accordion class="uk-background-muted">
+                    <li>
+                      <a class="uk-accordion-title" href="#">●使い方</a>
+                      <div class="uk-accordion-content">
+                        ①導入したら <br>
+                        <code style="background-color:#777777;color:#ffffff;">/reload</code>
+                        を実行 <br>
+                        <code style="background-color:#777777;color:#ffffff;">==denden's APEX datapack==</code>
+                        と表示されたら導入成功。 <br>
+                        β版の場合は念のため <br>
+                        <code style="background-color:#777777;color:#ffffff;">/function apex:manage/load</code>
+                        も実行してください <br><br>
+
+                        ②レジェンド選択 <br>
+                        ブラッドハウンド <br>
+                        <code style="background-color:#777777;color:#ffffff;">/function apex:set_legend/set_bloodhound</code> <br>
+
+                        コースティック <br>
+                        <code style="background-color:#777777;color:#ffffff;">/function apex:set_legend/set_caustic</code> <br>
+
+                        オクタン <br>
+                        <code style="background-color:#777777;color:#ffffff;">/function apex:set_legend/set_octane</code> <br>
+
+                        選択なし <br>
+                        <code style="background-color:#777777;color:#ffffff;">/function apex:set_legend/set_nothing</code> <br><br>
+
+                        ③クールタイムを待つ <br>
+                        クールタイムは原作ゲームと同じ時間で設定しています。 <br><br>
+
+                        ◎戦術、アルティメットはクールダウンが終わると、専用アイテムが付与されます。投げる(デフォルト"Q")ことで使用できます。 <br>
+                        ※インベントリがいっぱいの場合はアイテムが付与されません。
+                        「アビリティが使用可能」「アルティメットが使用可能」の表示がでても、インベントリがいっぱいでアイテムが付与されなかった場合は「<code style="background-color:#777777;color:#ffffff;">/reload</code>」で再読み込みをしてください。 <br>
+                        ※コースティックのアルティメット(ガスグレネード)のみ、スニーク右クリックで投げる軌道(赤いガイド)の確認、右クリックで投擲です。 <br><br><br>
+
+
+                        ●細かい仕様
+                        <ul>
+                          ブラッドハウンド
+                          <li>
+                            戦術
+                            <ul>
+                              <li>レイヤーの位置から30マス以内にいる敵対MOBをハイライトします。</li>
+                            </ul>
+                          </li>
+                          <li>
+                            アルティメット
+                            <ul>
+                              <li>移動速度上昇１、暗視効果が付与される</li>
+                              <li>戦術クールタイム半減</li>
+                              <li>アルティメット発動中にMOB(敵MOB、中立MOB関係なく)キルをすると、アルティメットの残り時間が5秒増加する。<br>
+                                (最大30秒)</li>
+                            </ul>
+                          </li><br>
+                          コースティック
+                          <li>
+                            戦術
+                            <ul>
+                              <li>ガストラップのストック数は３つまでです。</li>
+                              <li>ガストラップをワールドに置ける数は３つまでです。４つ目以降は、設置してからの時間が一番長いガストラップを消滅させて、新たにガストラップを設置します。</li>
+                              <li>ガストラップの足の部分(黄色い部分)を殴る、矢を当てるなどをすると、ガストラップが消滅します。また、その時にコースティックに設定したプレイヤーが半径3マス以内にいれば、そのプレイヤーのガストラップ保有数は1つ増えます。</li>
+                              <li>ガストラップの風船部分を殴る、矢を当てるなどするか、半径４マス以内に敵対MOBが入った場合(壁越しは検知されません)、敵対MOBダメージを与えます。</li>
+                            </ul>
+                          </li><br>
+                          オクタン
+                          <li>
+                            アルティメット
+                            <ul>
+                              <li>ジャンプパッドはワールドに１つしか設置できません。新しいジャンプパッドを設置する時に、前のジャンプパッドは破壊されます。</li>
+                              <li>ジャンプパッドは殴る、矢を当てるなどすれば破壊できます。</li>
+                            </ul>
+                          </li>
+                        </ul><br>
+                        <div class="uk-text-center">
+                          ●遊んでみた感想お待ちしています <br>
+                          でんでんのTwitterまで！ <br>
+                          <span class="uk-margin-small-right" uk-icon="twitter"></span><a href="https://twitter.com/dendend12345">@dendend12345</a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
               <li>
                 <img data-src="./img/dendens_Compass_Resources/compass_top.jpg" width="500" alt="" uk-img><br>
                 画面上に方角を表示させるデータパックです<br>
@@ -212,30 +310,30 @@
                       <div class="uk-accordion-content">
                         向いている方角を示すデータパック。表示方法は全部で3通り。<br>
                         1,左上に常に表示<br>
-                        <img data-src="./img/dendens_Compass_Resources/1.png" width="500" alt="" uk-img><br>
+                        <img data-src="./img/dendens_Compass_Resources/1.png" width="500" alt="" uk-img><br><br>
 
                         2.ホットバーの一番右を使用して表示<br>
                         ※ホットバー１番右のアイテムが消えるので注意！<br>
                         ※リソースパック「<a href="./dist/denden_compass/dendens_Compass_Resources.zip">denden's_Compass_Resources</a>」必須<br>
-                        <img data-src="./img/dendens_Compass_Resources/2.png" width="500" alt="" uk-img><br>
+                        <img data-src="./img/dendens_Compass_Resources/2.png" width="500" alt="" uk-img><br><br>
 
                         3.アクションバーに常に表示<br>
-                        <img data-src="./img/dendens_Compass_Resources/3.png" width="500" alt="" uk-img><br>
+                        <img data-src="./img/dendens_Compass_Resources/3.png" width="500" alt="" uk-img><br><br>
 
                         使い方(チャット欄で入力)<br>
                         最初に必ずこれを<br>
-                        /function #minecraft:load<br>
+                        <code style="background-color:#777777;color:#ffffff;">/function #minecraft:load</code><br>
 
                         コンパスの表示<br>
-                        /function compass_main:compass_on<br>
+                        <code style="background-color:#777777;color:#ffffff;">/function compass_main:compass_on</code><br>
                         コンパスの非表示<br>
-                        /function compass_main:compass_off<br>
+                        <code style="background-color:#777777;color:#ffffff;">/function compass_main:compass_off</code><br>
                         コンパス１にセット<br>
-                        /function compass_manage:set2<br>
+                        <code style="background-color:#777777;color:#ffffff;">/function compass_manage:set2</code><br>
                         コンパス２にセット<br>
-                        /function compass_manage:set2<br>
+                        <code style="background-color:#777777;color:#ffffff;">/function compass_manage:set2</code><br>
                         コンパス３にセット<br>
-                        /function compass_manage:set3<br>
+                        <code style="background-color:#777777;color:#ffffff;">/function compass_manage:set3</code><br>
                       </div>
                     </li>
                   </ul>
