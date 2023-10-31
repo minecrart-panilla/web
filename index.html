@@ -2,7 +2,7 @@
 <html>
 
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# website: http://ogp.me/ns/website#">
-    <title>Panilla!-マイクラのデータパック・リソースパック作成集団-</title>
+    <title>Panilla! | マイクラのデータパック・リソースパック作成集団</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,11 +13,11 @@
     <meta property="og:title" content="minecraft Panilla" />
     <meta property="og:description" content="どこから集まったのかよくわからないメンバーが、ぼちぼちデータ配布をしていきます。バニラから少しだけ寄り道をして、もっと楽しめるマイクラを目指しています。いつもと少しだけ違うマイクラで、多くの楽しみを見つけてみてください。" />
     <meta property="og:site_name" content="Panilla" />
-    <meta property="og:image" content="https://www.minecraftpanilla.com/img/thum.jpg" />
+    <meta property="og:image" content="/img/thum.jpg" />
 
-    <link rel="stylesheet" href="css/uikit.min.css" />
-    <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="/css/uikit.min.css" />
+    <script src="/js/uikit.min.js"></script>
+    <script src="/js/uikit-icons.min.js"></script>
     <link rel="icon" href="img/favicon.ico" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHPW9TT8HY"></script>
@@ -38,27 +38,27 @@
         <div class="uk-navbar-center">
           <ul class="uk-navbar-nav">
             <li>
-              <a href="./index.html#top"><span uk-icon="home" class="uk-margin-small-right"></span>
+              <a href="/index.html#top"><span uk-icon="home" class="uk-margin-small-right"></span>
                 Top
               </a>
             </li>
             <li>
-              <a href="./index.html#topics"><span uk-icon="file-text" class="uk-margin-small-right"></span>
+              <a href="/index.html#topics"><span uk-icon="file-text" class="uk-margin-small-right"></span>
                 Topics
               </a>
             </li>
             <li>
-              <a href="./index.html#downloads"><span uk-icon="download" class="uk-margin-small-right"></span>
+              <a href="/index.html#downloads"><span uk-icon="download" class="uk-margin-small-right"></span>
                 Download
               </a>
             </li>
             <li>
-              <a href="./index.html#faq"><span uk-icon="question" class="uk-margin-small-right"></span>
+              <a href="/index.html#faq"><span uk-icon="question" class="uk-margin-small-right"></span>
                 FAQ
               </a>
             </li>
             <li>
-              <a href="./index.html#about"><span uk-icon="users" class="uk-margin-small-right"></span>
+              <a href="/index.html#about"><span uk-icon="users" class="uk-margin-small-right"></span>
                 About
               </a>
             </li>
@@ -77,11 +77,11 @@
       <div class="uk-offcanvas-bar">
         <button class="uk-offcanvas-close" type="button" uk-close></button>
         <ul class="uk-nav">
-          <li><a href="./index.html#">TOP</a></li>
-          <li><a href="./index.html#topics">TOPICS</a></li>
-          <li><a href="./index.html#downloads">DOWNLOAD</a></li>
-          <li><a href="./index.html#faq">FAQ</a></li>
-          <li><a href="./index.html#about">ABOUT</a></li>
+          <li><a href="/index.html#">TOP</a></li>
+          <li><a href="/index.html#topics">TOPICS</a></li>
+          <li><a href="/index.html#downloads">DOWNLOAD</a></li>
+          <li><a href="/index.html#faq">FAQ</a></li>
+          <li><a href="/index.html#about">ABOUT</a></li>
         </ul>
       </div>
     </div>
@@ -89,8 +89,8 @@
     <div class="uk-margin-left uk-margin-right ">
 
       <div class="">
-        <div class="uk-background-cover uk-background-fixed uk-height-1-1 uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url(./img/header.jpg);" uk-height-viewport="offset-top: true; offset-bottom: 5">
-          <img data-src="img/logo.png" width="500vh" uk-img alt="logo-image">
+        <div class="uk-background-cover uk-background-fixed uk-height-1-1 uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url(/img/header.jpg);" uk-height-viewport="offset-top: true; offset-bottom: 5">
+          <img data-src="/img/logo.png" width="500vh" uk-img alt="logo-image">
         </div>
       </div>
 
@@ -100,9 +100,6 @@
       <div class="uk-flex uk-flex-center uk-margin-large-top uk-heading-small">
         Topics
       </div>
-      <a id="history" class="uk-flex uk-flex-center" href="./topics.html">
-        history→
-      </a>
 
 
       <div class="uk-container uk-width-4-5@m">
@@ -121,9 +118,11 @@
             var restxt=xhr.responseXML;
             var topicscontent = "";
             for(let i = 0 ; i < 3 ; i++){
-              topicscontent += restxt.getElementById("topics").children[i].outerHTML
-              console.log(topicscontent)
+              topicscontent += restxt.getElementById("topics").children[i].outerHTML;
+              //console.log(topicscontent)
             }
+            topicscontent += "<a href=\"/topics.html\" class=\"uk-link-heading\"><div class=\"uk-width-1-1 uk-card uk-card-default uk-margin-small-top\"><div class=\"uk-card-body\"><div class=\"uk-card-title\">and more ...</div></div></div></a>";
+            // topicscontent += "<a href=\"/topics.html\" class=\"uk-link-heading uk-card uk-card-default uk-margin-small-top \" style=\"margin:0;\" uk-grid><div class=\"uk-card-body\"><div class=\"uk-card-title\">and more ...</div></div></a>";
             topics.innerHTML = topicscontent;            
           }
         };
@@ -134,238 +133,85 @@
       <div class="uk-flex uk-flex-center uk-margin-large-top uk-heading-small">
           Downloads
       </div>
-      <div class="uk-container uk-width-4-5@m">
-        <div class="uk-card-body uk-card-default uk-width-1-1">
-          <ul class="uk-subnav uk-subnav-pill uk-flex-center" uk-switcher="connect: .switcher-container">
-            <li><a href="#">
-              dendens apex datapacks openBeta
-            </a></li>
-            <li><a href="#">
-              denden's Compass ver.2.0
-            </a></li>
-            <!-- <li><a href="#">
-              TEX－D2 NE 32x
-            </a></li> -->
-<!--
-            <li><a href="#">
-              DP/RP名称
-            </a></li>
--->
+      <div class="">
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay:true; autoplay-interval:3000; clsActivated: uk-transition-active; center: true">
+
+          <ul class="uk-slider-items uk-grid">
+            <li class="uk-width-3-4">
+              <a href="/contents/dendens_apex_datapack.html" class="uk-link-heading uk-card-hover uk-card uk-card-default uk-grid-collapse uk-child-width-1-7@s uk-margin" uk-grid>
+                <div class="uk-panel">
+                  <img src="/img/dendens_apex_datapack/apexHeaderHorizon.png" width="1800" height="1200" alt="">
+                  <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">DENDENS APEX DATAPACKS OPENBETA</h3>
+                    <p class="uk-margin-remove">APEX Legendsのレジェンドのアビリティとアルティメットを再現したデータパックです。</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="uk-width-3-4">
+              <a href="/contents/dendens_Compass_Resources.html" class="uk-link-heading uk-card-hover uk-card uk-card-default uk-grid-collapse uk-child-width-1-7@s uk-margin" uk-grid>
+                <div class="uk-panel">
+                  <img src="/img/dendens_Compass_Resources/compass_top.jpg" width="1800" height="1200" alt="">
+                  <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">DENDEN'S COMPASS VER.2.0</h3>
+                    <p class="uk-margin-remove">画面上に方角を表示させるデータパックです。</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="uk-width-3-4">
+              <a href="/contents/dendens_apex_datapack.html" class="uk-link-heading uk-card-hover uk-card uk-card-default uk-grid-collapse uk-child-width-1-7@s uk-margin" uk-grid>
+                <div class="uk-panel">
+                  <img src="/img/dendens_apex_datapack/apexHeaderHorizon.png" width="1800" height="1200" alt="">
+                  <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">DENDENS APEX DATAPACKS OPENBETA</h3>
+                    <p class="uk-margin-remove">APEX Legendsのレジェンドのアビリティとアルティメットを再現したデータパックです。</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="uk-width-3-4">
+              <a href="/contents/dendens_Compass_Resources.html" class="uk-link-heading uk-card-hover uk-card uk-card-default uk-grid-collapse uk-child-width-1-7@s uk-margin" uk-grid>
+                <div class="uk-panel">
+                  <img src="/img/dendens_Compass_Resources/compass_top.jpg" width="1800" height="1200" alt="">
+                  <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">DENDEN'S COMPASS VER.2.0</h3>
+                    <p class="uk-margin-remove">画面上に方角を表示させるデータパックです。</p>
+                  </div>
+                </div>
+              </a>
+            </li>
           </ul>
-          <div class="uk-container uk-width-4-5@m">
-            <ul class="uk-switcher switcher-container">
-              <li>
-                <span class="uk-badge">データパック</span> <span class="uk-badge">リソースパック</span> <span class="uk-badge">Version 1.19.4</span>
-              </li>
-              <li>
-                <span class="uk-badge">データパック</span> <span class="uk-badge">Version 1.19.4</span>
-              </li>
-              <li>
-                <span class="uk-badge">リソースパック</span> <span class="uk-badge">Version 1.16+</span>
-              </li>
-<!--
-              <li>
-                <span class="uk-badge">配布データの種類</span> <span class="uk-badge">対応バージョン</span>
-              </li>
--->
-            </ul>
-            <ul class="uk-switcher switcher-container">
-              <li>
-                <img data-src="./img/dendens_apex_datapack/apexHeaderHorizon.png" width="500" alt="dendens_apex_detapack_thumnal" uk-img><br>
-                APEX Legendsのレジェンドのアビリティとアルティメットを再現したデータパックです。 <br>
-                主に対MOB用に制作してるので、プレイヤー同士への効果はありません。 <br>
-                APEXのレジェンドたちが、マイクラの世界に迷い込んでしまったら…というコンセプトで作っているので、いつものサバイバルのマイクラを楽しみながら、クールタイムを待ち、スキルを楽しんでもらえたらなと思います。 <br>
-                マルチプレイ対応しました。 <br>
-                制作者 でんでん<br>
-                <span uk-icon="icon: cloud-download"></span>
-                <a href="./dist/dendens_apex_datapacks/dendens_apex_datapacks_openBeta.zip">dendens_apex_datapacks_openBeta</a><br>
-                <a href="./dist/dendens_apex_datapacks/dendens_apex_resourcepack.zip">dendens_apex_resourcepack</a><br>
-
-                <div>
-                  <ul uk-accordion class="uk-background-muted">
-                    <li>
-                      <a class="uk-accordion-title" href="#">●使い方</a>
-                      <div class="uk-accordion-content">
-                        ①導入したら <br>
-                        <code style="background-color:#777777;color:#ffffff;">/reload</code>
-                        を実行 <br>
-                        <code style="background-color:#777777;color:#ffffff;">==denden's APEX datapack==</code>
-                        と表示されたら導入成功。 <br>
-                        β版の場合は念のため <br>
-                        <code style="background-color:#777777;color:#ffffff;">/function apex:manage/load</code>
-                        も実行してください <br><br>
-
-                        ②レジェンド選択 <br>
-                        ブラッドハウンド <br>
-                        <code style="background-color:#777777;color:#ffffff;">/function apex:set_legend/set_bloodhound</code> <br>
-
-                        コースティック <br>
-                        <code style="background-color:#777777;color:#ffffff;">/function apex:set_legend/set_caustic</code> <br>
-
-                        オクタン <br>
-                        <code style="background-color:#777777;color:#ffffff;">/function apex:set_legend/set_octane</code> <br>
-
-                        ホライゾン <br>
-                        <code style="background-color:#777777;color:#ffffff;">/function apex:set_legend/set_horizon</code> <br>
-                        
-                        選択なし <br>
-                        <code style="background-color:#777777;color:#ffffff;">/function apex:set_legend/set_nothing</code> <br><br>
-
-                        ③クールタイムを待つ <br>
-                        クールタイムは原作ゲームと同じ時間で設定しています。<br>
-                        ※本家様のアップデートに合わせているわけではないので、異なる場合もあります。<br><br>
-
-                        ◎戦術、アルティメットはクールダウンが終わると、専用アイテムが付与されます。投げる(デフォルト"Q")もしくは右クリックで使用できます。 <br>
-                        ※インベントリがいっぱいの場合はアイテムが付与されません。
-                        「アビリティが使用可能」「アルティメットが使用可能」の表示がでても、インベントリがいっぱいでアイテムが付与されなかった場合は「<code style="background-color:#777777;color:#ffffff;">/reload</code>」で再読み込みをしてください。 <br><br>
-                        ＜ブラッドハウンド＞<br>
-                        戦術アビリティ　Q<br>                    
-                        アルティメット　Q<br>
-                        ＜オクタン＞<br>
-                        戦術アビリティ　Q<br>                    
-                        アルティメット　Q<br>
-                        ＜コースティック＞<br>
-                        戦術アビリティ　Q<br>                    
-                        アルティメット　右クリック<br>
-                        ※スニーク+右クリックで投擲ガイド表示<br>
-                        ＜ホライゾン＞<br>
-                        戦術アビリティ　Q<br>
-                        ※ポータル生成中に右クリックで中断<br><br>
-                                 
-                        ●細かい仕様
-                        <ul>
-                          ブラッドハウンド
-                          <li>
-                            戦術
-                            <ul>
-                              <li>レイヤーの位置から30マス以内にいる敵対MOBをハイライトします。</li>
-                            </ul>
-                          </li>
-                          <li>
-                            アルティメット
-                            <ul>
-                              <li>移動速度上昇１、暗視効果が付与される</li>
-                              <li>戦術クールタイム半減</li>
-                              <li>アルティメット発動中にMOB(敵MOB、中立MOB関係なく)キルをすると、アルティメットの残り時間が5秒増加する。<br>
-                                (最大30秒)</li>
-                            </ul>
-                          </li><br>
-                          コースティック
-                          <li>
-                            戦術
-                            <ul>
-                              <li>ガストラップのストック数は３つまでです。</li>
-                              <li>ガストラップをワールドに置ける数は３つまでです。４つ目以降は、設置してからの時間が一番長いガストラップを消滅させて、新たにガストラップを設置します。</li>
-                              <li>ガストラップの足の部分(黄色い部分)を殴る、矢を当てるなどをすると、ガストラップが消滅します。また、その時にコースティックに設定したプレイヤーが半径3マス以内にいれば、そのプレイヤーのガストラップ保有数は1つ増えます。</li>
-                              <li>ガストラップの風船部分を殴る、矢を当てるなどするか、半径４マス以内に敵対MOBが入った場合(壁越しは検知されません)、ガス噴射が開始します。プレイヤーへのダメージはありません。</li>
-                            </ul>
-                          </li><br>
-                          オクタン
-                          <li>
-                            アルティメット
-                            <ul>
-                              <li>ジャンプパッドはワールドに１つしか設置できません。新しいジャンプパッドを設置する時に、前のジャンプパッドは破壊されます。</li>
-                              <li>ジャンプパッドは殴る、矢を当てるなどすれば破壊できます。</li>
-                            </ul>
-                          </li><br>
-                           ホライゾン
-                          <li>
-                            アルティメット
-                            <ul>
-                              <li>ニュートを攻撃しても破壊はされません。</li>
-                            </ul>
-                          </li>
-<!--                           <br> -->
-<!--                           レイス
-                          <li>
-                            アルティメット
-                            <ul>
-                              <liポータルはワールドに1つだけ生成できます。新たにポータルを生成する際は、前のポータルを消滅させます。</li>
-                            </ul> -->
-                        </ul><br>
-                        <div class="uk-text-center">
-                          ●遊んでみた感想お待ちしています <br>
-                          でんでんのTwitterまで！ <br>
-                          <span class="uk-margin-small-right" uk-icon="twitter"></span><a href="https://twitter.com/dendend12345">@dendend12345</a>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <img data-src="./img/dendens_Compass_Resources/compass_top.jpg" width="500" alt="dendens_compass_thumnal" uk-img><br>
-                画面上に方角を表示させるデータパックです<br>
-                制作者 でんでん<br>
-                <span uk-icon="icon: cloud-download"></span> <a href="./dist/denden_compass/dendens_commpa1.19.4s.zip">dendens_compass</a>
-                <div>
-                  <ul uk-accordion class="uk-background-muted">
-                    <li>
-                      <a class="uk-accordion-title" href="#">使い方</a>
-                      <div class="uk-accordion-content">
-                        向いている方角を示すデータパック。表示方法は全部で3通り。<br>
-                        1,左上に常に表示<br>
-                        <img data-src="./img/dendens_Compass_Resources/1.png" width="500" alt="dendens_compass_ex1" uk-img><br><br>
-
-                        2.ホットバーの一番右を使用して表示<br>
-                        ※ホットバー１番右のアイテムが消えるので注意！<br>
-                        ※リソースパック「<a href="./dist/denden_compass/dendens_Compass_Resources.zip">denden's_Compass_Resources</a>」必須<br>
-                        <img data-src="./img/dendens_Compass_Resources/2.png" width="500" alt="dendens_compass_ex2" uk-img><br><br>
-
-                        3.アクションバーに常に表示<br>
-                        <img data-src="./img/dendens_Compass_Resources/3.png" width="500" alt="dendens_compass_ex3" uk-img><br><br>
-
-                        使い方(チャット欄で入力)<br>
-                        最初に必ずこれを<br>
-                        <code style="background-color:#777777;color:#ffffff;">/function #minecraft:load</code><br>
-
-                        コンパスの表示<br>
-                        <code style="background-color:#777777;color:#ffffff;">/function compass_main:compass_on</code><br>
-                        コンパスの非表示<br>
-                        <code style="background-color:#777777;color:#ffffff;">/function compass_main:compass_off</code><br>
-                        コンパス１にセット<br>
-                        <code style="background-color:#777777;color:#ffffff;">/function compass_manage:set2</code><br>
-                        コンパス２にセット<br>
-                        <code style="background-color:#777777;color:#ffffff;">/function compass_manage:set2</code><br>
-                        コンパス３にセット<br>
-                        <code style="background-color:#777777;color:#ffffff;">/function compass_manage:set3</code><br><br>
-                        
-                        <dl class="uk-description-list uk-description-list-divider">
-                          <dt>chage log</dt>
-                          <dt>・ver.2.0</dt>
-                          <dd>
-                              コンパス表示設定変更時にチャットログがでてわかりやすくなった
-                          </dd>
-                        </dl>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-
-              </li>
-              <!-- <li>
-                ファンタジー風リソースパック 疑似レイトレーシング対応<br>
-                制作者 mutuki_1204<br>
-                <span uk-icon="icon: cloud-download"></span><br>
-                <a href="./dist/TEX_D2_32x/TEX_D2 NE_32x_1.16_v1.018.zip">TEX_D2 NE_32x_1.16</a><br>
-                <a href="./dist/TEX_D2_32x/TEX_D2 NE_32x_1.17_v1.018.zip">TEX_D2 NE_32x_1.17.x</a><br>
-                <a href="./dist/TEX_D2_32x/TEX_D2 NE_32x_1.18_v1.018.zip">TEX_D2 NE_32x_1.18.x</a><br>
-                <div>
-                  <img data-src="./img/TEX_D2_32x/1.png" width="500" alt="TEX_D2_32x_ex1" uk-img><br>
-                  <img data-src="./img/TEX_D2_32x/2.jpeg" width="500" alt="TEX_D2_32x_ex2" uk-img><br>
-                  <img data-src="./img/TEX_D2_32x/3.jpeg" width="500" alt="TEX_D2_32x_ex3" uk-img><br>
-                </div>
-              </li> -->
-<!--
-              <li>
-                まだ作られていないリソースパック<br>
-                <a href="#">DL link</a>
-              </li>
--->
-            </ul>
-          </div>
+      
+          <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
+          <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
+      
         </div>
       </div>
+      <!-- <div class="uk-container uk-width-4-5@m uk-margin-top">
+        <a href="/contents/dendens_apex_datapack.html" class="uk-link-heading uk-card-hover uk-card uk-card-default uk-grid-collapse uk-child-width-1-7@s uk-margin" uk-grid>
+          <div class="uk-card-media-left uk-cover-container uk-width-1-5@xl">
+            <img src="/img/dendens_apex_datapack/apexHeaderHorizon.png" alt="" uk-cover>
+          </div>
+          <div class="uk-width-expand@xl">
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">DENDENS APEX DATAPACKS OPENBETA</h3>
+              <p>APEX Legendsのレジェンドのアビリティとアルティメットを再現したデータパックです。</p>
+            </div>
+          </div>
+        </a>
+        <a href="/contents/dendens_Compass_Resources.html" class="uk-link-heading uk-card-hover uk-card uk-card-default uk-grid-collapse uk-child-width-1-7@s uk-margin" uk-grid>
+          <div class="uk-width-expand@xl">
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">DENDEN'S COMPASS VER.2.0</h3>
+              <p>画面上に方角を表示させるデータパックです</p>
+            </div>
+          </div>
+          <div class="uk-card-media-left uk-cover-container uk-width-1-5@xl">
+            <img src="/img/dendens_Compass_Resources/compass_top.jpg" alt="" uk-cover>
+          </div>
+        </a>
+      </div> -->
 
 <!--
       <a name="donation"></a>
@@ -384,7 +230,7 @@
       <div class="uk-flex uk-flex-center uk-margin-large-top uk-heading-small">
         FAQ
       </div>
-      <div class="uk-container uk-margin-large-top　uk-position-relative uk-width-4-5@m">
+      <div class="uk-margin-large-top uk-position-relative">
         <div class="uk-card-body uk-card-default">
         <ul uk-accordion class="">
           <li>
@@ -392,7 +238,8 @@
               Q1. データパックの導入方法を知りたい。
             </a>
             <div class="uk-accordion-content">
-              <p>A1. ●データパックの場合<br>
+              <p>A1. <br>
+                ●データパックの場合<br>
                 「saves」を開き、データパックを導入したいフォルダを開く。<br>
                 「datapacks」フォルダに、ダウンロードして、展開したファイルを貼り付け。<br>
                 ワールドに入って、各データパックのロードテキストがチャット欄にでれば成功。既にワールドに参加している場合は「/reload」コマンドを使用して、読み込みを行う。<br><br><br>
@@ -423,7 +270,7 @@
               Q4. 著作権関係について知りたい
             </a>
             <div class="uk-accordion-content">
-              <p>A4. <a href="./attention.html#copyright">こちら</a>のページをご覧ください。</p>
+              <p>A4. <a href="/attention.html#copyright">こちら</a>のページをご覧ください。</p>
             </div>
           </li>
         </ul>
@@ -434,11 +281,11 @@
       <div class="uk-flex uk-flex-center uk-margin-large-top uk-heading-small">
         About
       </div>
-      <div class="uk-width-4-5 uk-container">
+      <div >
         <div class="uk-child-width-expand@s uk-flex uk-flex-center" uk-grid>
-          <a class="uk-margin-top uk-card uk-card-default uk-grid-collapse uk-margin-left uk-child-width-1-2 uk-link-toggle uk-link-toggle" href="./project.html" uk-grid>
+          <a class="uk-margin-top uk-card uk-card-default uk-grid-collapse uk-margin-left uk-child-width-1-2 uk-link-toggle uk-link-toggle uk-card-hover " href="/project.html" uk-grid>
             <div class="uk-card-media-left uk-cover-container">
-              <img src="img/logo.png" alt="about_logo" uk-cover>
+              <img src="/img/logo.png" alt="about_logo" uk-cover>
               <canvas width="300" height="200"></canvas>
             </div>
             <div>
@@ -447,9 +294,9 @@
               </div>
             </div>
           </a>
-          <a class="uk-margin-top uk-card uk-card-default uk-grid-collapse uk-margin-left uk-child-width-1-2 uk-link-toggle uk-link-toggle" href="./member.html" uk-grid>
+          <a class="uk-margin-top uk-card uk-card-default uk-grid-collapse uk-margin-left uk-child-width-1-2 uk-link-toggle uk-link-toggle uk-card-hover " href="/member.html" uk-grid>
             <div class="uk-card-media-left uk-cover-container uk-card-large">
-              <img src="img/header.jpg" alt="about_top" uk-cover>
+              <img src="/img/header.jpg" alt="about_top" uk-cover>
               <canvas width="200" height="200"></canvas>
             </div>
             <div>
