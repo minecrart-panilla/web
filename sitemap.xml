@@ -18,5 +18,13 @@
   <loc>https://www.minecraftpanilla.com/attention.html</loc>
   <priority>0.8</priority>
 </url>
+<url>
+  <loc>https://www.minecraftpanilla.com/contents/dendens_apex_datapack.html</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.minecraftpanilla.com/contents/dendens_Compass_Resources.html</loc>
+  <priority>0.8</priority>
+</url>
 
 </urlset>
